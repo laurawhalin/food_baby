@@ -1,0 +1,38 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
+//General
+
+body {
+  padding: 15px 0;
+  background-color: black;
+  color: white;
+}
+
+
+//Welcome page
+
+.food-baby {
+  background-image: image-url('burger.jpg');
+  background-repeat: no-repeat;
+  border-radius: 200px;
+  background-size: cover;
+  height: 400px;
+  margin-bottom: 30px;
+}
+
+h1.food-baby {
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+  padding-top: 125px;
+}
+
+a.btn.btn-lg.btn-default.btn-block {
+  margin-bottom: 20px;
+}
+
+.form-control.search {
+  height: 45px;
+  font-size: 17px;
+}
