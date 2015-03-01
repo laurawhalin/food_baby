@@ -38,6 +38,8 @@ gem 'autoprefixer-rails'
 
 group :development, :test do
   # gem 'sqlite3'
+  gem 'taps'
+  gem 'rvm'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry'
