@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-xs-12">
+    <nav role="navigation" class="navbar navbar-inverse">
+      <div id="navbarCollapse" class="collapse navbar-collapse">
+
+        <% if params[:controller] != "welcome" %>
+          <form role="search" class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" placeholder="Search a restaurant&hellip;" class="form-control">
+            </div>
+          </form>
+
+        <a href="#" class="nav-baby navbar-center">Food Baby</a>
+        <% end %>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Login</a></li>
+        </ul>
+
+      </div>
+    </nav>
+  </div>
+</div>
