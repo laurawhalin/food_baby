@@ -1,8 +1,4 @@
-<div id="welcome" class="row">
-  <div class="col-xs-12">
-    <%= button_to "Log In", "#", class: "btn btn-sm btn-default" %>
-  </div>
-
+<div id="welcome">
   <div class="row">
     <div class="col-md-4">
     </div>
@@ -10,9 +6,9 @@
 
       <h1 class="text-center food-baby">Food<br>Baby</h1>
 
-      <%= link_to "Eat with Kids", "#", class: "btn btn-lg btn-default btn-block" %>
+      <%= link_to "Eat with Kids", restaurants_path, class: "btn btn-lg btn-default btn-block" %>
 
-      <%= link_to "Eat without Kids", "#", class: "btn btn-lg btn-default btn-block" %>
+      <%= link_to "Eat without Kids", restaurants_path, class: "btn btn-lg btn-default btn-block" %>
 
       <form>
         <div class="row">
