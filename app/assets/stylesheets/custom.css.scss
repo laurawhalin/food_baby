@@ -18,6 +18,7 @@ a.nav-baby {
   font-family: 'Pacifico', cursive;
   font-size: 30px;
   text-decoration: none;
+  margin-left: 20px;
 }
 
 
@@ -26,11 +27,14 @@ a.nav-baby {
 .food-baby {
   background-image: image-url('burger.jpg');
   background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-position: center;
+  height: 400px;
+  width: 400px;
   border-radius: 200px;
   background-size: cover;
-  height: 400px;
-  // width: 400px;
-  margin: 0 0 30px 20px;
+  margin-bottom: 30px;
+  // display: block;
 }
 
 h1.food-baby {
@@ -92,3 +96,6 @@ a.btn.btn-lg.btn-default.btn-block {
 .list-group-item {
   color: black;
 }
+
+
+// Profile
