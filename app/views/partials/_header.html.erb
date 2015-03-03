@@ -1,26 +1,32 @@
-    <nav role="navigation" class="navbar navbar-inverse">
-      <div id="navbar" class="container-fluid">
+<nav role="navigation" class="navbar navbar-inverse">
+  <div id="navbar" class="container-fluid">
 
-        <div class="row">
-          <div class="col-xs-5">
-        <% if params[:controller] != "welcome" %>
+    <div class="row">
+      <% if params[:controller] != "welcome" %>
+        <div class="col-xs-5">
           <form role="search" class="navbar-form navbar-left">
             <div class="form-group">
-              <input type="text" placeholder="Search a restaurant&hellip;" class="form-control">
+              <input type="text" placeholder="Search&hellip;" class="form-control">
             </div>
           </form>
         </div>
 
         <div class="col-xs-3">
-          <a href="#" class="nav-baby">Food Baby</a>
+          <%= link_to("Food Baby", root_path, class: "nav-baby") %>
         </div>
-        <% end %>
 
         <div class="col-xs-4">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Login</a></li>
-        </ul>
-
-      </div>
-      </div>
-    </nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/users/1">Login</a></li>
+          </ul>
+        </div>
+      <% else %>
+        <div class="col-xs-12">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/users/1">Login</a></li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</nav>

@@ -14,4 +14,10 @@ class UnauthorizedUserTest < Capybara::Rails::TestCase
     click_link_or_button("Eat with Kids")
     assert_equal current_path, restaurants_path
   end
+
+  # test "user can visit restaurant page" do
+  #   visit restaurants_path
+  #   click_link_or_button("Pizza Shop").first
+  #   assert_equal c
+  # end
 end
