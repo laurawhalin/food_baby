@@ -17,6 +17,7 @@ a.nav-baby {
   text-align: center;
   font-family: 'Pacifico', cursive;
   font-size: 30px;
+  text-decoration: none;
 }
 
 
@@ -28,6 +29,7 @@ a.nav-baby {
   border-radius: 200px;
   background-size: cover;
   height: 400px;
+  // width: 400px;
   margin-bottom: 30px;
 }
 
@@ -44,4 +46,12 @@ a.btn.btn-lg.btn-default.btn-block {
 .form-control.search {
   height: 45px;
   font-size: 17px;
+}
+
+
+//Restaurant Index
+
+.map {
+  width: 400px;
+  height: 250px;
 }
