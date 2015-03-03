@@ -51,7 +51,44 @@ a.btn.btn-lg.btn-default.btn-block {
 
 //Restaurant Index
 
+#results {
+  // margin-left: 15px;
+}
+
+.restaurant-name {
+  margin-bottom: 15px;
+}
+
 .map {
-  width: 400px;
-  height: 250px;
+  width: 100%;
+  // border: 1px solid white;
+  margin-bottom: 10px;
+}
+
+.review {
+  margin-top: 10px;
+}
+
+.badge {
+  margin-right: 5px;
+}
+
+.listing {
+  line-height: 25px;
+}
+
+#comments {
+  margin-top: 20px;
+}
+
+
+//Restaurant Show
+
+.small-map {
+  width: 100%;
+  // height: 100px;
+}
+
+.list-group-item {
+  color: black;
 }
