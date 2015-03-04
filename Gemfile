@@ -49,6 +49,9 @@ group :development, :test do
   gem 'spring'
   gem 'minitest-rails-capybara'
   gem 'launchy'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
 end
 
 group :production do

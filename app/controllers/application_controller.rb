@@ -6,8 +6,9 @@ class ApplicationController < ActionController::Base
   private
 
   def current_user
-    @current_user ||= User.find(sessions[:user_id]) if sessions[:user_id]
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+  helper_method :current_user
 
   def authorize!
     redirect_to :back, flash[:alert] = "Not authorized" if current_user.nil?

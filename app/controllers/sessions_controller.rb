@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     user = User.find_or_create_from_auth(auth)
 
     if user
-      session[:user_id] = user_id
+      session[:user_id] = user.id
       redirect_to :back
     else
       flash[:messages] = "Unable to log in."
