@@ -1,12 +1,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Pacifico);
 
 //General
 
 body {
   padding-bottom: 15px;
-  background-color: black;
+  // background-color: #303442;
+  background-color: #262C36;
   color: white;
 }
 
@@ -15,41 +15,56 @@ body {
 
 a.nav-baby {
   text-align: center;
-  font-family: 'Pacifico', cursive;
-  font-size: 30px;
+  font-family: 'Lobster', cursive;
+  font-size: 46px;
   text-decoration: none;
   margin-left: 20px;
 }
 
+.glyphicon.glyphicon-search, .caret{
+  font-size: 40px;
+}
+
+.navbar.navbar-inverse {
+  height: 100px;
+  padding-top: 13px;
+}
+
+.nav.navbar-nav.navbar-right.login {
+  font-size: 35px;
+  padding-top: 13px;
+}
 
 //Welcome page
 
 .food-baby {
-  background-image: image-url('burger.jpg');
-  background-repeat: no-repeat;
-  // background-attachment: fixed;
-  background-position: center;
-  height: 400px;
-  width: 400px;
-  border-radius: 200px;
-  background-size: cover;
+  width: 100%;
   margin-bottom: 30px;
-  // display: block;
 }
 
-h1.food-baby {
-  font-family: 'Pacifico', cursive;
+a.btn.btn-lg.btn-default.home-page {
+  height: 155px;
+  margin: 50px;
   font-size: 60px;
-  padding-top: 125px;
+  color: #262C36;
+  padding-top: 35px;
+  display: block;
 }
 
-a.btn.btn-lg.btn-default.btn-block {
-  margin-bottom: 20px;
+.input-group.search {
+  margin: 0 50px;
 }
 
 .form-control.search {
-  height: 45px;
-  font-size: 17px;
+  height: 155px;
+  font-size: 60px;
+  // margin: 0 50px 50px;
+}
+
+.btn.btn-lg.btn-default.search {
+  height: 155px;
+  font-size: 60px;
+  // margin-right: 50px;
 }
 
 
