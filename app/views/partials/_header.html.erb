@@ -3,26 +3,60 @@
 
     <div class="row">
       <% if params[:controller] != "welcome" %>
-
-        <%= render './partials/nav_search' %>
-
-        <div class="col-xs-4">
-          <%= link_to("Food Baby", root_path, class: "nav-baby") %>
-        </div>
-
-        <div class="col-xs-4">
-          <%= render './partials/login' %>
-        </div>
-
-      <% else %>
-
-        <div class="col-xs-12">
-          <%= render './partials/login' %>
-          </ul>
-        </div>
-
-      <% end %>
+      <div class="col-xs-4">
+        <!-- <form role="search" class="navbar-form navbar-left">
+        <div class="form-group">
+        <input type="text" placeholder="Search&hellip;" class="form-control">
+      </div>
+    </form> -->
+    <ul class="nav navbar-nav">
+      <!-- <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-search"></span> <span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu">
+      <li> -->
+      <!-- <form class="dropdown-menu" role="search">
+      <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search">
     </div>
-
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form> -->
+  <!-- </li> -->
+  <!-- </ul> -->
+  <!-- </li> -->
+  <li class="dropdown this-works">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-search"></span>
+      <span class="caret"></span></a>
+      <div class="dropdown-menu dropdown-form">
+        <form class="form-inline" role="form">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search"
+            id="InputSearch" class="form-control">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go</button>
+            </span>
+          </div>
+          <!-- /input-group -->
+        </form>
+      </div></li>
+    </ul>
   </div>
+
+  <div class="col-xs-4">
+    <%= link_to("Food Baby", root_path, class: "nav-baby") %>
+  </div>
+
+  <div class="col-xs-4">
+    <ul class="nav navbar-nav navbar-right login">
+      <li><a href="/auth/facebook">Login</a></li>
+    </ul>
+  </div>
+  <% else %>
+  <div class="col-xs-12">
+    <ul class="nav navbar-nav navbar-right login">
+      <li><a href="/auth/facebook">Login</a></li>
+    </ul>
+  </div>
+  <% end %>
+</div>
+</div>
 </nav>
