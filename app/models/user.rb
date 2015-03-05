@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
     user = User.find_or_create_by(uid: auth.uid)
 
     user.email = auth.info.email
-    user.name = user_name
+    user.name = auth.user_name
+    require 'pry' ; binding.pry
     user.image_url = auth.info.image
     user.token = auth.credentials.token
     user.save

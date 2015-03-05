@@ -10,6 +10,15 @@ body {
   color: white;
 }
 
+a.btn.btn-lg.btn-default.mobile-btn {
+  height: 155px;
+  margin: 50px;
+  font-size: 60px;
+  color: #262C36;
+  padding-top: 35px;
+  display: block;
+}
+
 
 //Nav-bar
 
@@ -39,16 +48,7 @@ a.nav-baby {
 
 .food-baby {
   width: 100%;
-  margin-bottom: 30px;
-}
-
-a.btn.btn-lg.btn-default.home-page {
-  height: 155px;
-  margin: 50px;
-  font-size: 60px;
-  color: #262C36;
-  padding-top: 35px;
-  display: block;
+  margin: 0 0 25px 30px;
 }
 
 .input-group.search {
@@ -70,18 +70,14 @@ a.btn.btn-lg.btn-default.home-page {
 
 //Restaurant Index
 
-#results {
-  // margin-left: 15px;
-}
-
-.restaurant-name {
-  margin-bottom: 15px;
-}
-
 .map {
   width: 100%;
   // border: 1px solid white;
   margin-bottom: 10px;
+}
+
+.restaurant-name {
+  margin-bottom: 15px;
 }
 
 .review {
@@ -90,14 +86,6 @@ a.btn.btn-lg.btn-default.home-page {
 
 .badge {
   margin-right: 5px;
-}
-
-.listing {
-  line-height: 25px;
-}
-
-#comments {
-  margin-top: 20px;
 }
 
 
@@ -110,6 +98,14 @@ a.btn.btn-lg.btn-default.home-page {
 
 .list-group-item {
   color: black;
+}
+
+.listing {
+  line-height: 25px;
+}
+
+#comments {
+  margin-top: 20px;
 }
 
 

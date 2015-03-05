@@ -9,11 +9,17 @@ class SessionsController < ApplicationController
 
     if user
       session[:user_id] = user.id
-      redirect_to :back
+      redirect_to "/"
     else
       flash[:messages] = "Unable to log in."
       redirect_to :back
     end
+  end
+
+  def destroy
+    flash[:messages] = "You are logged out."
+    session.clear
+    redirect_to root_path
   end
 
   private

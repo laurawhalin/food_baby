@@ -1,11 +1,12 @@
-<div id="profile" class="container">
+<div id="profile" class="container-fluid">
   <div class="row">
     <div class="col-xs-12 text-center">
 
-        <%= image_tag(current_user.image_url, class: "img-circle") %>
-        <h4><%= current_user.first_name %></h4>
-        <%= link_to "My Favorites", "#", class: "btn btn-lg btn-default btn-block" %>
-        <%= link_to "My Comments", "#", class: "btn btn-lg btn-default btn-block" %>
+        <%= image_tag(@current_user.image_url, class: "img-circle") %>
+        <h4><%= @current_user.name %></h4>
+        <%= link_to "My Favorites", "#", class: "btn btn-lg btn-default mobile-btn" %>
+        <%= link_to "My Comments", "#", class: "btn btn-lg btn-default mobile-btn" %>
 
+    </div>
   </div>
 </div>
