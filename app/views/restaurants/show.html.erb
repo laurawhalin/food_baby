@@ -1,78 +1,56 @@
-<div id="restaurant">
+<div id="restaurant" class="container-fluid">
   <div class="row">
 
     <div class="col-xs-12">
 
-      <div class="row">
-        <div id="slider" class="col-xs-12">
-
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <h2 class="restaurant-name"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Pizza Restaurant</h2>
-        </div>
-      </div>
+      <h2 class="restaurant-name"><span class="glyphicon glyphicon-star-empty"></span>&nbsp;Pizza Restaurant</h2>
+      <%= image_tag('denver.jpg', class: "small-map mock-map") %>
 
       <div class="row">
         <div class="col-xs-6 listing">
-          <span class="glyphicon glyphicon-star"></span>
-          <span class="glyphicon glyphicon-star"></span>
-          <span class="glyphicon glyphicon-star"></span>
-          <span class="glyphicon glyphicon-star"></span><br>
           <span class="badge">Italian</span><span class="badge">pizza</span><br>
           <p>400 Main Street<br>
             Denver, CO 80101<br>
             (303) 748-4898</p>
-          <a href="#">website</a><br>
-          <div
-          class="fb-like"
-          data-share="true"
-          data-width="450"
-          data-show-faces="true">
-        </div>
-          <a href="#" class="social">facebook</a>
         </div>
         <div class="col-xs-6">
-          <%= image_tag('denver.jpg', class: "small-map") %>
-          <%= button_to('Write Review', '#', class: "btn btn-default btn-block btn-danger review") %>
+          <%= button_to('Write Review', '#', class: "btn btn-lg btn-default btn-block review") %>
+          <%= link_to 'Visit Website', '#', class: "website" %>
+          <%= link_to 'Add to My Favorites', '#', class: "website" %>
         </div>
       </div>
 
-      <div class="row">
-        <div id="comments" class="col-xs-12">
-          <p>6 comments</p>
-          <ul class="list-group">
-            <li class="list-group-item">
-              <h4 class="list-group-item-heading">user141</h4>
-              <p class="list-group-item-text"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
-              <p class="list-group-item-text">We love this place! Come on Tuesdays for free kids meals!</p>
+        <div id="comments">
+          <p class="comment-count">6 comments</p>
+          <ul>
+            <li class="comment-list">
+              <h4>user141</h4>
+              <p class="comment-text"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+              <p class="comment-text">We love this place! Come on Tuesdays for free kids meals!</p>
             </li>
-            <li class="list-group-item">
-              <h4 class="list-group-item-heading">user141</h4>
-              <p class="list-group-item-text"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
-              <p class="list-group-item-text">We love this place! Come on Tuesdays for free kids meals!</p>
+            <li class="comment-list">
+              <h4>user141</h4>
+              <p class="comment-text"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+              <p class="comment-text">We love this place! Come on Tuesdays for free kids meals!</p>
             </li>
-            <li class="list-group-item">
-              <h4 class="list-group-item-heading">user141</h4>
-              <p class="list-group-item-text"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
-              <p class="list-group-item-text">We love this place! Come on Tuesdays for free kids meals!</p>
+            <li class="comment-list">
+              <h4>user141</h4>
+              <p class="comment-text"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+              <p class="comment-text">We love this place! Come on Tuesdays for free kids meals!</p>
             </li>
-            <li class="list-group-item">
-              <h4 class="list-group-item-heading">user141</h4>
-              <p class="list-group-item-text"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
-              <p class="list-group-item-text">We love this place! Come on Tuesdays for free kids meals!</p>
+            <li class="comment-list">
+              <h4>user141</h4>
+              <p class="comment-text"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+              <p class="comment-text">We love this place! Come on Tuesdays for free kids meals!</p>
             </li>
-            <li class="list-group-item">
-              <h4 class="list-group-item-heading">user141</h4>
-              <p class="list-group-item-text"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
-              <p class="list-group-item-text">We love this place! Come on Tuesdays for free kids meals!</p>
+            <li class="comment-list">
+              <h4>user141</h4>
+              <p class="comment-text"><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span></p>
+              <p class="comment-text">We love this place! Come on Tuesdays for free kids meals!</p>
             </li>
           </ul>
         </div>
       </div>
 
-    </div>
-    </div>
-    </div>
+  </div>
+</div>
