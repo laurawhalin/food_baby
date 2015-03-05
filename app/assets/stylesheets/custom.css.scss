@@ -1,26 +1,34 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+$body-font: 'Lucida Sans Unicode', ariel, sans-serif;
+$heading-font: 'Lobster', cursive;
+$darkblue:  #2F2933;
+$ltgreen:   #B5E655;
+$dkgreen:   #96CA2D;
+$ltsky:     #7FC6BC;
+$dksky:     #4BB5C1;
+$bluegrey:  #EDF7F2;
+$fire:      #F79943;
 
 //General
 
 body {
   padding-bottom: 15px;
-  // background-color: #303442;
-  background-color: #2F2933;
-  font-family: "Lucida Sans Unicode", ariel, sans-serif;
+  background-color: $darkblue;
+  font-family: $body-font;
   color: white;
 }
 
 h4 {
-  color: #2F2933;
+  color: $darkblue;
 }
 
 a.btn.btn-lg.btn-default.mobile-btn {
   height: 155px;
   margin: 50px;
   font-size: 60px;
-  color: #2F2933;
+  color: $dksky;
   padding-top: 35px;
   display: block;
 }
@@ -30,11 +38,11 @@ a.btn.btn-lg.btn-default.mobile-btn {
 
 a.nav-baby {
   text-align: center;
-  font-family: 'Lobster', cursive;
+  font-family: $heading-font;
   font-size: 46px;
   text-decoration: none;
   margin-left: 40px;
-  color: #01A2A6;
+  color: $dksky;
 }
 
 .glyphicon.glyphicon-search, .caret{
@@ -59,7 +67,8 @@ a.nav-baby {
 
 .food-baby {
   width: 100%;
-  margin-bottom: 30px;
+  text-alignment: center;
+  margin: 20px 0 30px 40px;
 }
 
 .input-group.search {
@@ -74,14 +83,11 @@ a.nav-baby {
 .btn.btn-lg.btn-default.search {
   height: 155px;
   font-size: 60px;
+  color: $dksky;
 }
 
 
 //Restaurant Index
-
-.restaurant-name {
-  margin-bottom: 15px;
-}
 
 .map {
   width: 100%;
@@ -92,17 +98,27 @@ a.nav-baby {
   height: 100px;
   margin-bottom: 30px;
   font-size: 40px;
-  color: #2F2933;
+  color: $dksky;
   padding-top: 15px;
   display: block;
 }
 
 .restaurant-result {
   border-radius: 25px;
-  background-color: #EDEDED;
+  background-color: white;
   padding: 15px;
   margin: 25px 0px;
   font-size: 20px;
+}
+
+.result-title {
+  background-color: $ltsky;
+  padding: 15px;
+  margin: 25px 0px;
+  font-size: 20px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin: -15px -15px 15px -15px;
 }
 
 .website {
@@ -112,42 +128,44 @@ a.nav-baby {
 
 .comment-count {
   color: white;
-  font-size: 30px;
-  margin: 20px 0 0 30px   ;
+  font-size: 15px;
+  margin: 100px 0 0 30px   ;
 }
 
 .restaurant-result, a:-webkit-any-link {
   text-decoration: none;
 }
 
-.restaurant-result, h4 {
-  font-size: 40px;
-  color: #2F2933;
+
+.badger.result {
+    font-size: 12px;
+    padding: 15px 30px 15px 30px;
+    margin-right: 10px;
+    background-color: #F79943;
+    border-radius: 30px;
+    color: white;
 }
 
-.comment-text {
-  color: #2F2933;
-}
-
-.review {
+.restaurant-info {
   margin-top: 10px;
-}
-
-.badge {
-  font-size: 30px;
-  padding: 15px 20px 12px 20px;
-  margin-right: 10px;
-  background-color: #01A2A6;
-  border-radius: 30px;
 }
 
 
 //Restaurant Show
 
+.restaurant-name {
+  margin-bottom: 0px;
+  color: $darkblue;
+  background-color: $dkgreen;
+  padding: 15px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
 .small-map {
   width: 100%;
   height: 200px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .listing {
@@ -161,6 +179,14 @@ a.nav-baby {
   margin-top: 20px;
 }
 
+.badge {
+  font-size: 30px;
+  padding: 15px 20px 12px 20px;
+  margin-right: 10px;
+  background-color: $fire;
+  border-radius: 30px;
+}
+
 #comments {
   margin: 0;
 }
@@ -170,14 +196,26 @@ ul, #comments {
   margin-left: -20px;
 }
 
+.comment-text {
+  color: $darkblue;
+}
+
 .comment-list {
   margin-top: 25px;
   border-radius: 25px;
-  background-color: #EDEDED;
+  background-color: white;
   padding: 15px;
-  // display: block;
-  // width: 100%;
   font-size: 25px;
+}
+
+.comment-name {
+  font-size: 40px;
+  color: $darkblue;
+  background-color: $ltgreen;
+  padding: 10px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin: -15px -15px 15px -15px;
 }
 
 .list-group-item {
