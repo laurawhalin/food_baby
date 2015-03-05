@@ -4,8 +4,7 @@ class User < ActiveRecord::Base
     user = User.find_or_create_by(uid: auth.uid)
 
     user.email = auth.info.email
-    user.name = auth.user_name
-    require 'pry' ; binding.pry
+    user.name = self.user_name(auth)
     user.image_url = auth.info.image
     user.token = auth.credentials.token
     user.save
@@ -13,7 +12,7 @@ class User < ActiveRecord::Base
     user
   end
 
-  def user_name
-    auth.info.first_name + auth.info.last_name[0] + "."
+  def self.user_name(auth)
+    "#{auth.info.first_name} #{auth.info.last_name[0]}."
   end
 end

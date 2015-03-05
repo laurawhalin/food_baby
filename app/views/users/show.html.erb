@@ -3,7 +3,7 @@
     <div class="col-xs-12 text-center">
 
         <%= image_tag(@current_user.image_url, class: "img-circle") %>
-        <h4><%= @current_user.name %></h4>
+        <h4 class="profile-name"><%= @current_user.name %></h4>
         <%= link_to "My Favorites", "#", class: "btn btn-lg btn-default mobile-btn" %>
         <%= link_to "My Comments", "#", class: "btn btn-lg btn-default mobile-btn" %>
 

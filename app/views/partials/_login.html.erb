@@ -1,7 +1,7 @@
 <ul class="nav navbar-nav navbar-right login">
-  <% if @current_user %>
+  <% if current_user %>
     <li>
-      <!-- <%#= link_to "Welcome #{@current_user.name}", user_path(@current_user.id) %> |  -->
+      <%= link_to "Welcome #{current_user.name}", user_path(current_user) %> |
       <%= link_to "Log Out", logout_path %>
     </li>
   <% else %>

@@ -46,15 +46,11 @@
   </div>
 
   <div class="col-xs-4">
-    <ul class="nav navbar-nav navbar-right login">
-      <li><a href="/auth/facebook">Login</a></li>
-    </ul>
+    <%= render "./partials/login" %>
   </div>
   <% else %>
   <div class="col-xs-12">
-    <ul class="nav navbar-nav navbar-right login">
-      <li><a href="/auth/facebook">Login</a></li>
-    </ul>
+    <%= render "./partials/login" %>
   </div>
   <% end %>
 </div>
