@@ -31,6 +31,8 @@ gem 'unicorn'
 
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+gem 'omniauth-facebook'
+gem 'figaro'
 
 
 # Use Capistrano for deployment
@@ -47,6 +49,9 @@ group :development, :test do
   gem 'spring'
   gem 'minitest-rails-capybara'
   gem 'launchy'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
 end
 
 group :production do
