@@ -10,12 +10,6 @@ $ltsky:     #7FC6BC;
 $dksky:     #4BB5C1;
 $bluegrey:  #EDF7F2;
 $fire:      #F79943;
-// $darkblue:  #2F2933;
-// $sky:       #226B96;
-// $dirt:      #F0DFD0;
-// $moss:      #328570;
-// $lightmoss: #D1CFB0;
-// $fire:      #F23C3C;
 
 //General
 
@@ -111,7 +105,6 @@ a.nav-baby {
 
 .restaurant-result {
   border-radius: 25px;
-  // background-color: #EDEDED;
   background-color: white;
   padding: 15px;
   margin: 25px 0px;
@@ -119,7 +112,6 @@ a.nav-baby {
 }
 
 .result-title {
-  // background-color: #EDEDED;
   background-color: $ltsky;
   padding: 15px;
   margin: 25px 0px;
@@ -211,13 +203,11 @@ ul, #comments {
 .comment-list {
   margin-top: 25px;
   border-radius: 25px;
-  // background-color: #EDEDED;
   background-color: white;
   padding: 15px;
   font-size: 25px;
 }
 
-//works better on comments than restaurant results
 .comment-name {
   font-size: 40px;
   color: $darkblue;
