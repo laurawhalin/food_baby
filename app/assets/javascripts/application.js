@@ -30,10 +30,10 @@
 // });
 
 // $(document).ready(function(){
-  $(window).load(function(){
-    $('.this-works').on('shown.bs.dropdown', function () {
-      var inputField = $(this).find("input:text").first();
-      var x = setTimeout(function(){inputField.focus()}, -);
-    });
-  });
+  // $(window).load(function(){
+  //   $('.this-works').on('shown.bs.dropdown', function () {
+  //     var inputField = $(this).find("input:text").first();
+  //     var x = setTimeout(function(){inputField.focus()}, -);
+  //   });
+  // });
 // });
