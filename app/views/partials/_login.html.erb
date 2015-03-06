@@ -5,13 +5,13 @@
         <span class="menu-code">&#9776;</span>
       <% end %>
       <ul class="dropdown-menu" role="menu">
-          <% if params[:controller] != users  %>
+          <% if params[:controller] != "users"  %>
             <li class="dropdown-element"><%= link_to "Account", user_path(current_user) %></li>
           <% end %>
           <li class="dropdown-element"><%= link_to "Log Out", logout_path %></li>
       </ul>
     </li>
   <% else %>
-    <li><%= link_to "Log In", "/auth/facebook" %></li>
+    <li class="narrow"><%= link_to "Log In", "/auth/facebook" %></li>
   <% end %>
 </ul>

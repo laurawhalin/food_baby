@@ -33,6 +33,11 @@ a.btn.btn-lg.btn-default.mobile-btn {
   display: block;
 }
 
+.flash {
+  font-size: 40px;
+  color: $ltgreen;
+}
+
 
 //Nav-bar
 
@@ -74,17 +79,20 @@ a.nav-baby {
   margin-top: -2px;
 }
 
+.dropdown {
+  // width: 200px;
+}
+
+.narrow {
+  // width: 400px;
+}
+
 .dropdown-menu.dropdown-form {
   background-color: transparent;
   border: none;
   border-radius: 0 6px 12px rgba(0, 0, 0, 0);
   box-shadow: 0;
 }
-
-// .form-inline {
-//   width: 650px;
-//   margin-left: -150px;
-// }
 
 .form-control, .dropmenu-element {
   height: 100px;
@@ -103,6 +111,7 @@ a.nav-baby {
   font-size: 35px;
   color: $dksky;
 }
+
 
 //Welcome page
 
@@ -125,6 +134,14 @@ a.nav-baby {
   height: 155px;
   font-size: 60px;
   color: $dksky;
+  width: 120px;
+}
+
+li.dropdown-element {
+  height: 80px;
+  width: 200px;
+  font-size: 30px;
+  padding-top: 15px;
 }
 
 

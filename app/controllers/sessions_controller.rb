@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-    redirect_to user_path
+    redirect_to :back
   end
 
   def create
@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
     if user
       session[:user_id] = user.id
-      redirect_to "/"
+      redirect_to :back
     else
       flash[:messages] = "Unable to log in."
       redirect_to :back
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
   def destroy
     flash[:messages] = "You are logged out."
     session.clear
-    redirect_to root_path
+    redirect_to :back
   end
 
   private
