@@ -11,11 +11,9 @@
 
 <%= render "./partials/header" %>
 
-<div class="row container">
   <% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, :id => "flash_#{name}", class: "col-md-12 text-center muted", role: "alert" %>
+  <%= content_tag :div, msg, :id => "flash_#{name}", class: "text-center muted flash", role: "alert" %>
   <% end %>
-</div>
 
 <%= yield %>
 
