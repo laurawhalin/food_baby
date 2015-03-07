@@ -46,7 +46,7 @@ a.nav-baby {
   font-family: $heading-font;
   font-size: 46px;
   text-decoration: none;
-  margin-left: 40px;
+  margin-left: 136px;
   color: $dksky;
 }
 
@@ -57,6 +57,7 @@ a.nav-baby {
 .navbar.navbar-inverse {
   height: 100px;
   padding-top: 13px;
+  margin-right: -25px;
 }
 
 .nav.navbar-nav.navbar-right.login {
@@ -66,7 +67,7 @@ a.nav-baby {
 
 .menu-code {
   color: gray;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .glyphicon.glyphicon-chevron-left {
@@ -171,9 +172,9 @@ li.dropdown-element {
 
 .result-title {
   background-color: $ltsky;
-  padding: 15px;
+  padding: 20px;
   margin: 25px 0px;
-  font-size: 20px;
+  font-size: 30px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   margin: -15px -15px 15px -15px;
@@ -184,42 +185,32 @@ li.dropdown-element {
   font-size: 40px;
 }
 
-.comment-count {
+.results-count {
   color: white;
   font-size: 15px;
-  margin: 100px 0 0 30px   ;
+  margin: 100px 0 0 15px   ;
 }
 
 .restaurant-result, a:-webkit-any-link {
   text-decoration: none;
 }
 
+p.restaurant-info.badges {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 
 .badger.result {
     font-size: 12px;
     padding: 15px 30px 15px 30px;
     margin-right: 10px;
-    background-color: #F79943;
+    border: 7px solid #F79943;
     border-radius: 30px;
-    color: white;
+    color: $darkblue;
 }
 
 .restaurant-info {
   margin-top: 10px;
-}
-
-#map-container {
-  height: 400px;
-  border-radius: 16px 16px;
-  border-color: #fff;
-  border-style: solid;
-  box-shadow: 2px 2px 10px #B1B1B1;
-  margin-top: 25px;
-  border-width: 7px;
-}
-#map-canvas {
-  height: 384px;
-  width: 100%;
 }
 
 
@@ -259,6 +250,12 @@ li.dropdown-element {
   border-radius: 30px;
 }
 
+.comment-count {
+  color: white;
+  font-size: 15px;
+  margin: 100px 0 0 30px   ;
+}
+
 #comments {
   margin: 0;
 }
@@ -277,14 +274,14 @@ ul, #comments {
   border-radius: 25px;
   background-color: white;
   padding: 15px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .comment-name {
-  font-size: 40px;
+  font-size: 30px;
   color: $darkblue;
   background-color: $ltgreen;
-  padding: 10px;
+  padding: 20px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   margin: -15px -15px 15px -15px;

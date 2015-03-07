@@ -1,17 +1,23 @@
 <ul class="nav navbar-nav navbar-right login">
+
   <% if current_user %>
+
     <li class="dropdown">
       <%= link_to '#', class: "dropdown-toggle", "data-toggle" => "dropdown", role: "button", "aria-expanded" => "false" do %>
         <span class="menu-code">&#9776;</span>
       <% end %>
       <ul class="dropdown-menu" role="menu">
-          <% if params[:controller] != "users"  %>
-            <li class="dropdown-element"><%= link_to "Account", user_path(current_user) %></li>
-          <% end %>
+        <% if params[:controller] != "users"  %>
+          <li class="dropdown-element"><%= link_to "Account", user_path(current_user) %></li>
+        <% end %>
           <li class="dropdown-element"><%= link_to "Log Out", logout_path %></li>
       </ul>
     </li>
+
   <% else %>
+
     <li class="narrow"><%= link_to "Log In", "/auth/facebook" %></li>
+
   <% end %>
+
 </ul>

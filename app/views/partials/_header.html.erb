@@ -2,47 +2,52 @@
   <div id="navbar" class="container-fluid">
 
     <div class="row">
+
       <% if params[:controller] != "welcome" %>
 
-      <div class="col-xs-1">
-        <%= link_to :back do %>
-          <span class="glyphicon glyphicon-chevron-left"></span>
-        <% end %>
-      </div>
+        <div class="col-xs-1">
+          <%= link_to :back do %>
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          <% end %>
+        </div>
 
-      <div class="col-xs-8 text-center">
-        <%= link_to("Food Baby", root_path, class: "nav-baby") %>
-      </div>
+        <div class="col-xs-8 text-center">
+          <%= link_to("Food Baby", root_path, class: "nav-baby") %>
+        </div>
 
-      <div class="col-xs-1 text-right">
-        <ul class="nav navbar-nav">
-          <li class="dropdown this-works">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <span class="glyphicon glyphicon-search"></span>
-            </a>
-            <div class="dropdown-menu dropdown-form">
-              <form class="form-inline" role="form">
-                <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Search"
-                  id="InputSearch" class="form-control">
-                  <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Go</button>
-                  </span>
-                </div> <!-- /input-group -->
-              </form>
-            </div>
-          </li>
-        </ul>
-      </div>
+        <div class="col-xs-1 text-right">
+          <ul class="nav navbar-nav">
+            <li class="dropdown this-works">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-search"></span>
+              </a>
+              <div class="dropdown-menu dropdown-form">
+                <form class="form-inline" role="form">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search"
+                    id="InputSearch" class="form-control">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go</button>
+                    </span>
+                  </div> <!-- /input-group -->
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
 
         <div class="col-xs-2">
           <%= render "./partials/login" %>
         </div>
+
       <% else %>
+
         <div class="col-xs-12">
           <%= render "./partials/login" %>
         </div>
+        
       <% end %>
+
     </div>
   </div>
 </nav>
