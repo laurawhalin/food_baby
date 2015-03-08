@@ -148,9 +148,10 @@ li.dropdown-element {
 
 //Restaurant Index
 
-.map {
+#map {
   width: 100%;
   border-radius: 25px;
+  height: 450px;
 }
 
 .btn.btn-lg.btn-default.btn-block.review {
@@ -225,10 +226,11 @@ p.restaurant-info.badges {
   border-top-right-radius: 25px;
 }
 
-.small-map {
+#map.small-map {
   width: 100%;
   height: 200px;
   margin-bottom: 40px;
+  border-radius: 0px;
 }
 
 .listing {
