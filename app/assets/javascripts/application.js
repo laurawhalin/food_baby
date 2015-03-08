@@ -12,28 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap-sprockets
+//= require underscore
+//= require gmaps/google
 //= require_tree .
-
-// $(function() {
-//   $( "#slider" ).slider({
-//     value:100,
-//     min: 0,
-//     max: 500,
-//     step: 50,
-//     slide: function( event, ui ) {
-//       $( "#amount" ).val( "$" + ui.value );
-//     }
-//   });
-//   $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
-// });
-
-// $(document).ready(function(){
-  // $(window).load(function(){
-  //   $('.this-works').on('shown.bs.dropdown', function () {
-  //     var inputField = $(this).find("input:text").first();
-  //     var x = setTimeout(function(){inputField.focus()}, -);
-  //   });
-  // });
-// });
