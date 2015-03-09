@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  validates :email, :name, :image_url, :token, :uid, presence: true
+  validates :email, uniqueness: { case_sensitive: false }
+  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
 
   def self.find_or_create_from_auth(auth)
     user = User.find_or_create_by(uid: auth.uid)

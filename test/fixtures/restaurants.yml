@@ -1,0 +1,30 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  latitude: 1.5
+  longitude: 1.5
+  kid_friendly: false
+  kids_menu: false
+  address: MyString
+  locality: MyString
+  region: MyString
+  postcode: MyString
+  phone_number: MyString
+  website: MyString
+  cuisine: MyString
+
+two:
+  name: MyString
+  latitude: 1.5
+  longitude: 1.5
+  kid_friendly: false
+  kids_menu: false
+  address: MyString
+  locality: MyString
+  region: MyString
+  postcode: MyString
+  phone_number: MyString
+  website: MyString
+  cuisine: MyString
