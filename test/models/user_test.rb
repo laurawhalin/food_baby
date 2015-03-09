@@ -8,7 +8,7 @@ class UserTest < ActiveSupport::TestCase
       email:     "laurawhalin@example.com",
       token:     "FAKEFAKEFAKElksjdfalkvnaldirueaijo2948029394879sidFAKEFAKEFAKE",
       uid:       "2934989487982394892349",
-      image_url: "http://graph.facebook.com/10155651038065131/picture/laura.jpg",
+      image_url: "http://graph.facebook.com/2934989487982394892349/picture/laura.jpg",
     }
   end
 
