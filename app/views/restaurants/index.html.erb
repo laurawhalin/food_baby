@@ -15,7 +15,7 @@
         </p>
         <% @restaurants.each do |restaurant| %>
           <div class="restaurant-result">
-            <%= link_to restaurant_path(restaurant) do %>
+            <%= link_to restaurant_path(id: restaurant.id) do %>
               <h4 class="result-title"><%= restaurant.name %></h4>
               <!-- <p class="restaurant-info badges"> -->
                 <!-- <%# restaurant.cuisine.each do |type| %> -->

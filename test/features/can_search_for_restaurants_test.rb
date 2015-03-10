@@ -49,5 +49,14 @@ class CanSearchForRestaurantsTest < Capybara::Rails::TestCase
       page.must_have_content("1 Non-kid restaurant")
       page.wont_have_content("Kiddie Korner")
     end
+
+    scenario "and view the details of a selected restaurant" do
+      visit root_path
+      click_link_or_button "Eat with Kids"
+      click_link_or_button "Kiddie Korner"
+      save_and_open_page
+      page.must_have_content("Kiddie Korner")
+      page.must_have_content("Website")
+    end
   end
 end
