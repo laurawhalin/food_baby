@@ -19,7 +19,7 @@ restaurants = Restaurant.create([
     postcode: "80203",
     phone_number: "(303) 830-1001",
     website: "http://www.steubens.com/",
-    cuisine: "American,Traditional,Burgers,Sandwiches,Pub Food"
+    cuisine: ["American","Traditional","Burgers","Sandwiches","Pub Food"]
   },
   {
     name: "Cherry Cricket",
@@ -33,7 +33,7 @@ restaurants = Restaurant.create([
     postcode: "80206",
     phone_number: "(303) 322-7666",
     website: "http://www.cherrycricket.com",
-    cuisine: "Burgers,American,Pub Food,Mexican,Traditional"
+    cuisine: ["Burgers","American","Pub Food","Mexican","Traditional"]
   },
   {
     name: "Washington Park Grille",
@@ -47,7 +47,7 @@ restaurants = Restaurant.create([
     postcode: "80209",
     phone_number: "",
     website: "",
-    cuisine: "American,Italian,Seafood,Steak,Grill"
+    cuisine: ["American","Italian"]
   },
   {
     name: "Wynkoop Brewing Company",
@@ -61,7 +61,7 @@ restaurants = Restaurant.create([
     postcode: "80202",
     phone_number: "(303) 297-2700",
     website: "http://www.wynkoop.com",
-    cuisine: "American,Pub Food,Burgers,Californian,Traditional"
+    cuisine: ["American","Pub Food"]
   },
   {
     name: "X Bar",
@@ -75,7 +75,7 @@ restaurants = Restaurant.create([
     postcode: "80203",
     phone_number: "(303) 832-2687",
     website: "http://www.xbardenver.com",
-    cuisine: "American"
+    cuisine: ["American"]
   },
   {
     name: "Lola",
@@ -89,7 +89,7 @@ restaurants = Restaurant.create([
     postcode: "80211",
     phone_number: "(720) 570-8686",
     website: "http://www.loladenver.com",
-    cuisine: "Mexican,Seafood,Spanish,Contemporary,European"
+    cuisine: ["Mexican","Seafood"]
   },
   {
     name: "Root Down",
@@ -103,7 +103,7 @@ restaurants = Restaurant.create([
     postcode: "80211",
     phone_number: "(303) 993-4200",
     website: "http://www.rootdowndenver.com",
-    cuisine: "American,Vegetarian,International,Contemporary,Organic"
+    cuisine: ["American","Vegetarian","International"]
   },
   {
     name: "City O' City",
@@ -117,7 +117,7 @@ restaurants = Restaurant.create([
     postcode: "80203",
     phone_number: "(303) 831-6443",
     website: "http://www.cityocitydenver.com",
-    cuisine: "Vegetarian,Coffee,Pizza,Vegan,American"
+    cuisine: ["Vegetarian","Coffee","Pizza","Vegan","American"]
   },
   {
     name: "Great Divide Brewing Co.",
@@ -131,7 +131,7 @@ restaurants = Restaurant.create([
     postcode: "80205",
     phone_number: "(303) 296-9460",
     website: "http://www.greatdivide.com/",
-    cuisine: "Pub Food"
+    cuisine: ["Pub Food"]
   },
   {
     name: "The Lobby",
@@ -145,6 +145,6 @@ restaurants = Restaurant.create([
     postcode: "80205",
     phone_number: "(303) 997-9911",
     website: "http://www.thelobbydenver.com",
-    cuisine: "American,Burgers,Sandwiches,Steak,Cafe"
+    cuisine: ["American"]
   }
   ])

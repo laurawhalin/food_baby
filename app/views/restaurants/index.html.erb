@@ -2,57 +2,39 @@
   <div class="row">
     <div class="col-xs-12">
 
-      <!-- <div id="slider" class="col-xs-12">
-    </div> -->
+        <!-- <div id="slider" class="col-xs-12">
+      </div> -->
 
-    <div>
-      <div id="map"></div>
-    </div>
+      <div>
+        <div id="map"></div>
+      </div>
 
-    <div id="results-list">
-      <p class="results-count">16 Kid-friendly restaurants</p>
-      <div class="restaurant-result">
-        <a href="restaurants/1">
-          <h4 class="result-title">Pizza Shop</h4>
-          <p class="restaurant-info badges"><span class="badger result">Italian</span><span class="badger result">pizza</span></p>
-          <p class="restaurant-info">400 Main Street<br>
-            Denver, CO 80101</p>
-          </a>
-        </div>
-        <div class="restaurant-result">
-          <a href="restaurants/1">
-            <h4 class="result-title">Pizza Shop</h4>
-            <p class="restaurant-info"><span class="badger result">Italian</span><span class="badger result">pizza</span></p>
-            <p class="restaurant-info">400 Main Street<br>
-              Denver, CO 80101</p>
-            </a>
-          </div>
+      <div id="results-list">
+        <p class="results-count">
+          <% if @restaurants[0].kid_friendly == true %>
+            <%= pluralize(@restaurants.count, "Kid-friendly restaurant") %> found
+          <% else %>
+            <%= pluralize(@restaurants.count, "Non-kid restaurant") %> found
+          <% end %>
+        </p>
+        <% @restaurants.each do |restaurant| %>
           <div class="restaurant-result">
-            <a href="restaurants/1">
-              <h4 class="result-title">Pizza Shop</h4>
-              <p class="restaurant-info"><span class="badger result">Italian</span><span class="badger result">pizza</span></p>
-              <p class="restaurant-info">400 Main Street<br>
-                Denver, CO 80101</p>
-              </a>
-            </div>
-            <div class="restaurant-result">
-              <a href="restaurants/1">
-                <h4 class="result-title">Pizza Shop</h4>
-                <p class="restaurant-info"><span class="badger result">Italian</span><span class="badger result">pizza</span></p>
-                <p class="restaurant-info">400 Main Street<br>
-                  Denver, CO 80101</p>
-                </a>
-              </div>
-              <div class="restaurant-result">
-                <a href="restaurants/1">
-                  <h4 class="result-title">Pizza Shop</h4>
-                  <p class="restaurant-info"><span class="badger result">Italian</span><span class="badger result">pizza</span></p>
-                  <p class="restaurant-info">400 Main Street<br>
-                    Denver, CO 80101</p>
-                  </a>
-                </div>
-              </div>
-
-            </div>
+            <%= link_to restaurant_path(restaurant) do %>
+              <h4 class="result-title"><%= restaurant.name %></h4>
+              <!-- <p class="restaurant-info badges"> -->
+                <!-- <%# restaurant.cuisine.each do |type| %> -->
+                  <!-- <span class="badger result"><%#= type %></span> -->
+                <!-- <%# end %> -->
+              <!-- </p> -->
+              <p class="restaurant-info">
+                <%= restaurant.address %><br>
+                <%= restaurant.locality %>, <%= restaurant.region %> <%= restaurant.postcode %>
+              </p>
+            <% end %>
           </div>
-        </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
