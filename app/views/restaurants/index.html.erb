@@ -11,11 +11,7 @@
 
       <div id="results-list">
         <p class="results-count">
-          <% if @restaurants[0].kid_friendly == true %>
-            <%= pluralize(@restaurants.count, "Kid-friendly restaurant") %> found
-          <% else %>
-            <%= pluralize(@restaurants.count, "Non-kid restaurant") %> found
-          <% end %>
+          <%= render "restaurant_count" %>
         </p>
         <% @restaurants.each do |restaurant| %>
           <div class="restaurant-result">

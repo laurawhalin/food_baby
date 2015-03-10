@@ -2,8 +2,6 @@ require "test_helper"
 
 class CanSearchForRestaurantsTest < Capybara::Rails::TestCase
 
-  # given(:restaurant1) { ... }
-
   before {
     Restaurant.create([{
       name: "Wine Bar",
