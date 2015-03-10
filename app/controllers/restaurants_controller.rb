@@ -1,5 +1,10 @@
 class RestaurantsController < ApplicationController
   def show
+    @restaurant = Restaurant.find(params[:id])
+    @hash = Gmaps4rails.build_markers(@restaurant) do |restaurant, marker|
+      marker.lat restaurant.latitude
+      marker.lng restaurant.longitude
+    end
   end
 
   def index

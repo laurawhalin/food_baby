@@ -15,7 +15,7 @@
         </p>
         <% @restaurants.each do |restaurant| %>
           <div class="restaurant-result">
-            <%= link_to restaurant_path(restaurant) do %>
+            <%= link_to restaurant_path(id: restaurant.id) do %>
               <h4 class="result-title"><%= restaurant.name %></h4>
               <!-- <p class="restaurant-info badges"> -->
                 <!-- <%# restaurant.cuisine.each do |type| %> -->
@@ -34,3 +34,12 @@
     </div>
   </div>
 </div>
+
+<script type='text/javascript'>
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+});
+</script>

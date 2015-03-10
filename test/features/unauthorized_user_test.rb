@@ -7,10 +7,4 @@ class UnauthorizedUserTest < Capybara::Rails::TestCase
     assert_content page, "Eat with Kids"
     assert_content page, "Eat without Kids"
   end
-
-  # test "user can visit restaurant page" do
-  #   visit restaurants_path
-  #   click_link_or_button("Pizza Shop").first
-  #   assert_equal c
-  # end
 end

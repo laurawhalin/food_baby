@@ -15,5 +15,5 @@
 # Ignore application configuration
 /config/application.yml
 
-#ignore public assets so heroku can precompile each time
-public/assets/**
+# Ignore simplecov
+/coverage
