@@ -1,0 +1,5 @@
+<% if @restaurants[0].kid_friendly == true %>
+  <%= pluralize(@restaurants.count, "Kid-friendly restaurant") %> found
+<% else %>
+  <%= pluralize(@restaurants.count, "Non-kid restaurant") %> found
+<% end %>
