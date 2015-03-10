@@ -28,6 +28,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'meta_request'
   gem 'shoulda'
+  gem 'simplecov', :require => false
 end
 
 group :production do

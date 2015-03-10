@@ -54,7 +54,6 @@ class CanSearchForRestaurantsTest < Capybara::Rails::TestCase
       visit root_path
       click_link_or_button "Eat with Kids"
       click_link_or_button "Kiddie Korner"
-      save_and_open_page
       page.must_have_content("Kiddie Korner")
       page.must_have_content("Website")
     end
