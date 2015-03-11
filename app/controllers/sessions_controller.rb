@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-    redirect_to :back
+    # redirect_to :back
   end
 
   def create
@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
     if user
       session[:user_id] = user.id
-      redirect_to :back
+      redirect_to session[:previous_page]
     else
       flash[:messages] = "Unable to log in."
       redirect_to :back
