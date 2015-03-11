@@ -15,7 +15,6 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'omniauth-facebook'
 gem 'figaro'
-gem 'gmaps4rails'
 
 group :development, :test do
   gem 'byebug'

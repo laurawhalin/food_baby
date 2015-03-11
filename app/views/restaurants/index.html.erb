@@ -6,7 +6,7 @@
       </div> -->
 
       <div>
-        <div id="map"></div>
+        <div id="map-canvas" style="height:600px"></div>
       </div>
 
       <div id="results-list">
@@ -34,12 +34,3 @@
     </div>
   </div>
 </div>
-
-<script type='text/javascript'>
-handler = Gmaps.build('Google');
-handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-  markers = handler.addMarkers(<%=raw @hash.to_json %>);
-  handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();
-});
-</script>
