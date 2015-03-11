@@ -34,6 +34,13 @@ class CanSearchForRestaurantsTest < Capybara::Rails::TestCase
   }
 
   feature "User can search for restaurants" do
+    scenario "by visiting the restaurants url" do
+      visit restaurants_path
+      page.must_have_content("Kiddie Korner")
+      page.must_have_content("Wine Bar")
+      page.wont_have_content("Kid-friendly")
+    end
+
     scenario "with kids" do
       visit root_path
       click_link_or_button "Eat with Kids"
