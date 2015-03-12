@@ -4,9 +4,9 @@
 
       <%= image_tag("sushi.png", class: "food-baby") %>
 
-      <%= link_to "Eat with Kids", restaurants_path("kids"), class: "btn btn-lg btn-default mobile-btn" %>
+      <%= link_to "Eat with Kids", restaurants_path(:kid_friendly => "true"), class: "btn btn-lg btn-default mobile-btn" %>
 
-      <%= link_to "Eat without Kids", restaurants_path("no-kids"), class: "btn btn-lg btn-default mobile-btn" %>
+      <%= link_to "Eat without Kids", restaurants_path(:kid_friendly => "false"), class: "btn btn-lg btn-default mobile-btn" %>
 
       <form>
         <div class="input-group search">

@@ -2,7 +2,7 @@ var map;
 
 function initialize() {
   var mapOptions = {
-    zoom: 10
+    zoom: 13
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),
   mapOptions);
@@ -13,12 +13,6 @@ function initialize() {
       var pos = new google.maps.LatLng(position.coords.latitude,
         position.coords.longitude);
 
-        var infowindow = new google.maps.InfoWindow({
-          map: map,
-          position: pos,
-          content: 'Location found using HTML5.'
-        });
-
         map.setCenter(pos);
       }, function() {
         handleNoGeolocation(true);
@@ -27,6 +21,24 @@ function initialize() {
       // Browser doesn't support Geolocation
       handleNoGeolocation(false);
     }
+
+
+    // need the lat long for each restaurant
+    $.get('restaurants.json', function(restaurantData) {
+      restaurantData.forEach(function(restaurant) {
+        // make a new LatLng object
+        var latlng = new google.maps.LatLng(restaurant.latitude, restaurant.longitude);
+        // make a new Marker object
+        var marker = new google.maps.Marker({
+          position: latlng,
+          map: map,
+          title:"Hello World!"
+        });
+        // place the marker on the map
+        marker.setMap(map);
+      });
+    });
+
   }
 
   function handleNoGeolocation(errorFlag) {
@@ -42,7 +54,6 @@ function initialize() {
       content: content
     };
 
-    var infowindow = new google.maps.InfoWindow(options);
     map.setCenter(options.position);
   }
 
