@@ -11,6 +11,7 @@ class RestaurantsController < ApplicationController
   end
 
   def index
+    
     @restaurants = Restaurant.kid_friendly?(params[:kid_friendly])
     respond_with @restaurants
   end

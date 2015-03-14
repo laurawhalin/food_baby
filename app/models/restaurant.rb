@@ -1,12 +1,16 @@
-class Restaurant < ActiveRecord::Base
-  validates :name, :longitude, :latitude, :address, :locality,
-            :region, :postcode, :phone_number, presence: true
+class Restaurant
+
+  def self.factual
+    Factual.new(ENV['factual_OAuth_key'], ENV['factual_OAuth_secret'])
+  end
 
   def self.kid_friendly?(query)
     if query
-      @restaurants = where(kid_friendly: query)
+      factual.table("restaurants-us").filters({"kids_goodfor" => query})
+        .geo("$circle" => {"$center" => [location], "$meters" => 5000}).limit(2).rows
     else
-      @restaurants = all
+      factual.table("restaurants-us")
+        .geo("$circle" => {"$center" => [location], "$meters" => 5000}).limit(2).rows
     end
   end
 end
