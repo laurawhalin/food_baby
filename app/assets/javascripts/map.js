@@ -1,3 +1,4 @@
+console.log("work!");
 var map;
 
 function initialize() {
@@ -39,7 +40,6 @@ function initialize() {
       // Browser doesn't support Geolocation
       handleNoGeolocation(false);
     }
-    console.log(hello);
   //
   //   // Get user's current location something with latlng?????????
   //   $('#submit-query').click( function() {
