@@ -11,8 +11,16 @@ class RestaurantsController < ApplicationController
   end
 
   def index
-    
-    @restaurants = Restaurant.kid_friendly?(params[:kid_friendly])
+    # respond_to do |format|
+    #   format.json { render json: }
+    # end
+    @restaurants = Restaurant.kid_friendly?(params[:kid_friendly], location)
     respond_with @restaurants
+  end
+
+  private
+
+  def restaurant_params
+    params.require(:restaurant).permit(coordinate_attributes: [:latitude, :longitude])
   end
 end

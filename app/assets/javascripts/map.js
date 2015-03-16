@@ -7,21 +7,51 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'),
   mapOptions);
 
+  // Try HTML5 geolocation original code
+  // if(navigator.geolocation) {
+  //   navigator.geolocation.getCurrentPosition(function(position) {
+  //     var pos = new google.maps.LatLng(position.coords.latitude,
+  //       position.coords.longitude);
+  //
+  //       map.setCenter(pos);
+  //     }, function() {
+  //       handleNoGeolocation(true);
+  //     });
+  // } else {
+  //     // Browser doesn't support Geolocation
+  //     handleNoGeolocation(false);
+  //   }
+
   // Try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = new google.maps.LatLng(position.coords.latitude,
-        position.coords.longitude);
+      var initial_latitude = position.coords.latitude.toFixed(6);
+      var initial_longitude = position.coords.longitude.toFixed(6);
+      // var userLatLng = new google.maps.LatLng(initial_latitude, initial_longitude);
+
+      var pos = new google.maps.LatLng(initial_latitude, initial_longitude);
 
         map.setCenter(pos);
       }, function() {
         handleNoGeolocation(true);
       });
-    } else {
+  } else {
       // Browser doesn't support Geolocation
       handleNoGeolocation(false);
     }
+    console.log(hello);
+  //
+  //   // Get user's current location something with latlng?????????
+  //   $('#submit-query').click( function() {
+  //     $('#coordinate_latitude').attr('value', parseFloat(initial_latitude));
+  //     $('#coordinate_longitude').attr('value', parseFloat(initial_longitude));
+  //   });
 
+    $.ajax({
+      data: { latitude: initial_latitude, longitude: initial_longitude },
+      type: 'get',
+      url: "/restaurants"
+    });
 
     // need the lat long for each restaurant
     $.get('restaurants.json', function(restaurantData) {
@@ -34,6 +64,17 @@ function initialize() {
           map: map,
           title:"Hello World!"
         });
+
+        var infoContent = '<h2>Drop Location</h2>';
+
+        var infoWindow = new google.maps.InfoWindow({
+          content: infoContent
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infoWindow.open(map,marker);
+        });
+
         // place the marker on the map
         marker.setMap(map);
       });
