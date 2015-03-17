@@ -4,9 +4,9 @@
 
       <%= image_tag("sushi.png", class: "food-baby") %>
 
-      <%= link_to "Eat with Kids", restaurants_path(:kid_friendly => "true"), class: "btn btn-lg btn-default mobile-btn" %>
+      <%= link_to "Eat with Kids", restaurants_path(:kid_friendly => "true"), id: "submit-query", class: "btn btn-lg btn-default mobile-btn" %>
 
-      <%= link_to "Eat without Kids", restaurants_path(:kid_friendly => "false"), class: "btn btn-lg btn-default mobile-btn" %>
+      <%= link_to "Eat without Kids", restaurants_path(:kid_friendly => "false"), id: "submit-query", class: "btn btn-lg btn-default mobile-btn" %>
 
 
       <!-- This didn't work because I couldn't pass the kid_friendly param through -->

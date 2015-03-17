@@ -8,6 +8,4 @@ Rails.application.routes.draw do
   resources :restaurants, only: [:index, :show, :create]
 
   resources :users, only: [:show, :destroy]
-
-  # get '/current_location', to: 'locations#update', as: 'fetch_current_location'
 end

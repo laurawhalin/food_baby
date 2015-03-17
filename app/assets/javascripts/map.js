@@ -1,4 +1,23 @@
-console.log("work!");
+   // Get user's current location something with latlng?????????
+//   $('#submit-query').click( function() {
+//     $('#coordinate_latitude').attr('value', parseFloat(initial_latitude));
+//     $('#coordinate_longitude').attr('value', parseFloat(initial_longitude));
+//   });
+
+  // Get user's current location something with latlng?????????
+  $('#submit-query').click( function() {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var initial_latitude = position.coords.latitude.toFixed(6);
+      var initial_longitude = position.coords.longitude.toFixed(6);
+console.log("this is lat"+initial_latitude);
+    $.ajax ({
+      data: { latitude: initial_latitude, longitude: initial_longitude },
+      type: 'post',
+      url: '/restaurants'
+    });
+  });
+
+
 var map;
 
 function initialize() {
@@ -28,9 +47,9 @@ function initialize() {
     navigator.geolocation.getCurrentPosition(function(position) {
       var initial_latitude = position.coords.latitude.toFixed(6);
       var initial_longitude = position.coords.longitude.toFixed(6);
-      // var userLatLng = new google.maps.LatLng(initial_latitude, initial_longitude);
 
-      var pos = new google.maps.LatLng(initial_latitude, initial_longitude);
+      var pos = new google.maps.LatLng(position.coords.latitude,
+        position.coords.longitude);
 
         map.setCenter(pos);
       }, function() {
@@ -40,18 +59,6 @@ function initialize() {
       // Browser doesn't support Geolocation
       handleNoGeolocation(false);
     }
-  //
-  //   // Get user's current location something with latlng?????????
-  //   $('#submit-query').click( function() {
-  //     $('#coordinate_latitude').attr('value', parseFloat(initial_latitude));
-  //     $('#coordinate_longitude').attr('value', parseFloat(initial_longitude));
-  //   });
-
-    $.ajax({
-      data: { latitude: initial_latitude, longitude: initial_longitude },
-      type: 'get',
-      url: "/restaurants"
-    });
 
     // need the lat long for each restaurant
     $.get('restaurants.json', function(restaurantData) {

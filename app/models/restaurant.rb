@@ -6,9 +6,9 @@ class Restaurant
 
   def self.kid_friendly?(query, location)
     if query
-      location
-      # factual.table("restaurants-us").filters({"kids_goodfor" => query})
-      #   .geo("$circle" => {"$center" => [location], "$meters" => 5000}).limit(2).rows
+      # location
+      factual.table("restaurants-us").filters({"kids_goodfor" => query})
+        .geo("$circle" => {"$center" => [location], "$meters" => 5000}).limit(2).rows
     else
       location
       # factual.table("restaurants-us")
