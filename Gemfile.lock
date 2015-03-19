@@ -256,6 +256,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   launchy
+  mail
   meta_request
   minitest-rails-capybara
   omniauth-facebook
