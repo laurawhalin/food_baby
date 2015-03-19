@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
     user.token = auth.credentials.token
     user.save
 
+    RegistrationEmail.send_welcome_email(user.email, user.name).deliver_now
+
     user
   end
 
