@@ -13,10 +13,8 @@ class Restaurant
   def self.kid_friendly(query)
     if query == "true"
       self.restaurants_with_kids
-    elsif query == "false" || query == nil
-      self.restaurants_without_kids
     else
-      self.restaurants_for_either
+      self.restaurants_without_kids
     end
   end
 
@@ -34,8 +32,4 @@ class Restaurant
              .geo("$circle" => {"$center" => [39.749747, -104.999782], "$meters" => 5000}).rows
   end
 
-  def self.restaurants_for_either
-    factual.table("restaurants-us")
-      .geo("$circle" => {"$center" => [39.749747, -104.999782], "$meters" => 5000}).rows
-  end
 end
