@@ -6,11 +6,12 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-    @restaurant = Restaurant.find(params[:id])
+    @restaurant = Restaurant.details(params[:id])
+    respond_with @restaurant
   end
 
   def index
-    @restaurants = Restaurant.kid_friendly?(params[:kid_friendly])
+    @restaurants = Restaurant.kid_friendly(params[:kid_friendly])
     respond_with @restaurants
   end
 end

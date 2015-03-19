@@ -2,7 +2,7 @@ var map;
 
 function initialize() {
   var mapOptions = {
-    zoom: 13
+    zoom: 18
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),
   mapOptions);
@@ -10,6 +10,9 @@ function initialize() {
   // Try HTML5 geolocation
   if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
+      var initial_latitude = position.coords.latitude.toFixed(6);
+      var initial_longitude = position.coords.longitude.toFixed(6);
+
       var pos = new google.maps.LatLng(position.coords.latitude,
         position.coords.longitude);
 
@@ -17,11 +20,10 @@ function initialize() {
       }, function() {
         handleNoGeolocation(true);
       });
-    } else {
+  } else {
       // Browser doesn't support Geolocation
       handleNoGeolocation(false);
     }
-
 
     // need the lat long for each restaurant
     $.get('restaurants.json', function(restaurantData) {
@@ -32,8 +34,18 @@ function initialize() {
         var marker = new google.maps.Marker({
           position: latlng,
           map: map,
-          title:"Hello World!"
         });
+
+        var infoContent = '<h2>Drop Location</h2>';
+
+        var infoWindow = new google.maps.InfoWindow({
+          content: infoContent
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infoWindow.open(map,marker);
+        });
+
         // place the marker on the map
         marker.setMap(map);
       });
@@ -50,7 +62,7 @@ function initialize() {
 
     var options = {
       map: map,
-      position: new google.maps.LatLng(39.7391500, -104.9847000),
+      position: new google.maps.LatLng(39.749747, -104.999782),
       content: content
     };
 

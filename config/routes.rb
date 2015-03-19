@@ -5,7 +5,8 @@ Rails.application.routes.draw do
 
   get '/logout' => 'sessions#destroy'
 
-  resources :restaurants, only: [:index, :show]
+  resources :restaurants, only: [:index, :show, :create]
+  # get '/restaurants/:id', to: 'restaurants#show'
 
   resources :users, only: [:show, :destroy]
 end

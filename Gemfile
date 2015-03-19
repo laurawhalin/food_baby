@@ -16,7 +16,7 @@ gem 'autoprefixer-rails'
 gem 'omniauth-facebook'
 gem 'figaro'
 gem 'responders', '~> 2.0'
-gem 'mail'
+gem 'factual-api'
 
 group :development, :test do
   gem 'byebug'

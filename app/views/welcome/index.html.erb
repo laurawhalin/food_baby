@@ -4,9 +4,22 @@
 
       <%= image_tag("sushi.png", class: "food-baby") %>
 
-      <%= link_to "Eat with Kids", restaurants_path(:kid_friendly => "true"), class: "btn btn-lg btn-default mobile-btn" %>
+      <%= link_to "Eat with Kids", restaurants_path(:kid_friendly => "true"), id: "submit-query", class: "btn btn-lg btn-default mobile-btn" %>
 
-      <%= link_to "Eat without Kids", restaurants_path(:kid_friendly => "false"), class: "btn btn-lg btn-default mobile-btn" %>
+      <%= link_to "Eat without Kids", restaurants_path(:kid_friendly => "false"), id: "submit-query", class: "btn btn-lg btn-default mobile-btn" %>
+
+
+      <!-- This didn't work because I couldn't pass the kid_friendly param through -->
+      <!-- ({:controller => "users", :action => "confirm"}, {:method => "get"}) -->
+      <!-- <%#= form_tag({controller: :restaurants, action: :index, kid_friendly: true }, { method: :get }) do %> -->
+        <!-- <input id="coordinate_latitude" name="restaurant[coordinate_attributes][latitude]" type="hidden" /> -->
+        <!-- <input id="coordinate_longitude" name="restaurant[coordinate_attributes][longitude]" type="hidden" /> -->
+        <!-- <%#= submit_tag "Eat with Kids", id: "submit-query", class: "btn btn-lg btn-default mobile-btn" %> -->
+
+      <!-- <%#= form_tag({controller: :restaurants, action: :index, kid_friendly: false }, { method: :get }) do %> -->
+        <!-- <input id="coordinate_latitude" name="restaurant[coordinate_attributes][latitude]" type="hidden" /> -->
+        <!-- <input id="coordinate_longitude" name="restaurant[coordinate_attributes][longitude]" type="hidden" /> -->
+        <!-- <%#= submit_tag "Eat without Kids", id: "submit-query", class: "btn btn-lg btn-default mobile-btn" %> -->
 
       <form>
         <div class="input-group search">

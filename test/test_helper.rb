@@ -16,8 +16,7 @@ OmniAuth.config.mock_auth[:default] = OmniAuth::AuthHash.new({
     :email => 'laura@example.com',
     :first_name => 'Laura',
     :last_name => 'Whalin',
-    :image => 'picture.jpg'
-  },
+    :image => 'picture.jpg'},
   :credentials => { :token => '1234'}
   })
 

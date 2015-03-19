@@ -2,38 +2,45 @@ require "test_helper"
 
 class RestaurantTest < ActiveSupport::TestCase
 
-  def valid_attributes
-    {
-      name:         "Pizza Place",
-      latitude:     "-46.9837498",
-      longitude:    "37.28379288",
-      kid_friendly: true,
-      kids_menu:    true,
-      address:      "400 Main Street",
-      locality:     "Denver",
-      region:       "CO",
-      postcode:     "80202",
-      phone_number: "(303) 555-7777",
-      website:      "pizzaplace.com",
-      cuisine:      "Italian"
-    }
+  test "can find kid-friendly restaurants" do
+    query           = "true"
+    location        = [39.7391500, -104.9847000]
+    restaurants     = Restaurant.kid_friendly(query)
+
+    first_restaurant = restaurants.first
+
+    assert_equal 2, restaurants.count
+    assert_equal "Steuben's", first_restaurant['name']
+    assert_equal true, first_restaurant['kids_goodfor']
   end
 
-  def restaurant
-    @restaurant ||= Restaurant.new(valid_attributes)
+  test "can find non-kid restaurants" do
+    query           = "false"
+    location        = [39.7391500, -104.9847000]
+    restaurants     = Restaurant.kid_friendly(query)
+
+    first_restaurant = restaurants.first
+
+    assert_equal 2, restaurants.count
+    assert_equal "X Bar", first_restaurant['name']
+    assert_equal false, first_restaurant['kids_goodfor']
   end
 
-  def test_valid
-    assert restaurant.valid?
+  test "can view restaurants without a query" do
+    query = nil
+    location        = [39.7391500, -104.9847000]
+    restaurants     = Restaurant.kid_friendly(query)
+
+    first_restaurant = restaurants.first
+
+    assert_equal 2, restaurants.count
+    assert_equal "X Bar", first_restaurant['name']
   end
 
-  should validate_presence_of(:name)
-  should validate_presence_of(:latitude)
-  should validate_presence_of(:longitude)
-  should validate_presence_of(:address)
-  should validate_presence_of(:locality)
-  should validate_presence_of(:region)
-  should validate_presence_of(:postcode)
-  should validate_presence_of(:phone_number)
+  test "can view details for a single restaurant" do
+    factual_id = "2561940e-d371-4dfa-8df6-3b797700ebaf"
+    restaurant = Restaurant.details(factual_id)
 
+    assert_equal "Steuben's", restaurant['name']
+  end
 end
