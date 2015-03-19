@@ -31,5 +31,4 @@ class Restaurant
              {"$or" => [{"category_ids" => {"$includes" => 347}}, {"kids_goodfor" => "false"}]}]})
              .geo("$circle" => {"$center" => [39.749747, -104.999782], "$meters" => 5000}).rows
   end
-
 end

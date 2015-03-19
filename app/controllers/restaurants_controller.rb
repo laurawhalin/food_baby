@@ -1,10 +1,6 @@
 class RestaurantsController < ApplicationController
   respond_to :html, :json
 
-  after_filter do
-    puts response.body
-  end
-
   def show
     @restaurant = Restaurant.details(params[:id])
     respond_with @restaurant
