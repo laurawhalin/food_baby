@@ -1,46 +1,11 @@
-  // users current location something with lat lng
-  // $('#submit-query').click( function() {
-  //   $('#coordinate_latitude').attr('value', parseFloat(initial_latitude));
-  //   $('#coordinate_longitude').attr('value', parseFloat(initial_longitude));
-  // });
-
-  // users current location something with lat lng
-  // $('#submit-query').click( function() {
-  //   navigator.geolocation.getCurrentPosition(function(position) {
-  //     var initial_latitude = position.coords.latitude.toFixed(6);
-  //     var initial_longitude = position.coords.longitude.toFixed(6);
-  //
-  //   $.ajax ({
-  //     data: { latitude: initial_latitude, longitude: initial_longitude },
-  //     type: 'post',
-  //     url: '/restaurants'
-  //   });
-  // });
-
-
 var map;
 
 function initialize() {
   var mapOptions = {
-    zoom: 17
+    zoom: 18
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),
   mapOptions);
-
-  // Try HTML5 geolocation original code
-  // if(navigator.geolocation) {
-  //   navigator.geolocation.getCurrentPosition(function(position) {
-  //     var pos = new google.maps.LatLng(position.coords.latitude,
-  //       position.coords.longitude);
-  //
-  //       map.setCenter(pos);
-  //     }, function() {
-  //       handleNoGeolocation(true);
-  //     });
-  // } else {
-  //     // Browser doesn't support Geolocation
-  //     handleNoGeolocation(false);
-  //   }
 
   // Try HTML5 geolocation
   if(navigator.geolocation) {
