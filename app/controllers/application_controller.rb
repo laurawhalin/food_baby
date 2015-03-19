@@ -11,10 +11,6 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
-  def authorize!
-    redirect_to :back, flash[:alert] = "Not authorized" if current_user.nil?
-  end
-
   def redirect_to_previous_page
     session[:previous_page] = request.referrer
   end
