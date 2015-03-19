@@ -1,15 +1,15 @@
-   // Get user's current location something with latlng?????????
-//   $('#submit-query').click( function() {
-//     $('#coordinate_latitude').attr('value', parseFloat(initial_latitude));
-//     $('#coordinate_longitude').attr('value', parseFloat(initial_longitude));
-//   });
+  // users current location something with lat lng
+  // $('#submit-query').click( function() {
+  //   $('#coordinate_latitude').attr('value', parseFloat(initial_latitude));
+  //   $('#coordinate_longitude').attr('value', parseFloat(initial_longitude));
+  // });
 
-  // Get user's current location something with latlng?????????
+  // users current location something with lat lng
   $('#submit-query').click( function() {
     navigator.geolocation.getCurrentPosition(function(position) {
       var initial_latitude = position.coords.latitude.toFixed(6);
       var initial_longitude = position.coords.longitude.toFixed(6);
-console.log("this is lat"+initial_latitude);
+
     $.ajax ({
       data: { latitude: initial_latitude, longitude: initial_longitude },
       type: 'post',
@@ -69,7 +69,6 @@ function initialize() {
         var marker = new google.maps.Marker({
           position: latlng,
           map: map,
-          title:"Hello World!"
         });
 
         var infoContent = '<h2>Drop Location</h2>';

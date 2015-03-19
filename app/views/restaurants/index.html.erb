@@ -15,16 +15,16 @@
         </p>
         <% @restaurants.each do |restaurant| %>
           <div class="restaurant-result">
-            <%= link_to restaurant_path(id: restaurant.id) do %>
-              <h4 class="result-title"><%= restaurant.name %></h4>
+            <%= link_to restaurant_path(id: restaurant['factual_id']) do %>
+              <h4 class="result-title"><%= restaurant['name'] %></h4>
               <!-- <p class="restaurant-info badges"> -->
                 <!-- <%# restaurant.cuisine.each do |type| %> -->
                   <!-- <span class="badger result"><%#= type %></span> -->
                 <!-- <%# end %> -->
               <!-- </p> -->
               <p class="restaurant-info">
-                <%= restaurant.address %><br>
-                <%= restaurant.locality %>, <%= restaurant.region %> <%= restaurant.postcode %>
+                <%= restaurant['address'] %><br>
+                <%= restaurant['locality'] %>, <%= restaurant['region'] %> <%= restaurant['postcode'] %>
               </p>
             <% end %>
           </div>
