@@ -7,7 +7,6 @@ class Restaurant
   end
 
   def self.details(factual_id)
-    # factual.table.places(factual_id)
     factual.table("places-us").row(factual_id)
   end
 
@@ -25,18 +24,18 @@ class Restaurant
     factual.table("restaurants-us")
     .filters({"$and" => [{"kids_goodfor" => {"$blank" => false}}, {"category_ids" => {"$excludes" => 332}},
              {"$and" => [{"category_ids" => {"$includes" => 347}}, {"kids_goodfor" => "true"}]}]})
-             .geo("$circle" => {"$center" => [39.7391500, -104.9847000], "$meters" => 5000}).limit(2).rows
+             .geo("$circle" => {"$center" => [39.7391500, -104.9847000], "$meters" => 5000}).rows
   end
 
   def self.restaurants_without_kids
     factual.table("restaurants-us")
     .filters({"$and" => [{"kids_goodfor" => {"$blank" => true}}, {"category_ids" => {"$excludes" => 332}},
              {"$or" => [{"category_ids" => {"$includes" => 347}}, {"kids_goodfor" => "false"}]}]})
-             .geo("$circle" => {"$center" => [39.7391500, -104.9847000], "$meters" => 5000}).limit(2).rows
+             .geo("$circle" => {"$center" => [39.7391500, -104.9847000], "$meters" => 5000}).rows
   end
 
   def self.restaurants_for_either
     factual.table("restaurants-us")
-      .geo("$circle" => {"$center" => [39.7391500, -104.9847000], "$meters" => 5000}).limit(2).rows
+      .geo("$circle" => {"$center" => [39.7391500, -104.9847000], "$meters" => 5000}).rows
   end
 end
