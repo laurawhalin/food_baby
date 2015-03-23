@@ -36,7 +36,8 @@ function initialize() {
           map: map,
         });
 
-        var infoContent = '<h2>Drop Location</h2>';
+        var infoContent = '<h2>Restaurant....</h2>'+
+        '<p>More restaurant...</p>';
 
         var infoWindow = new google.maps.InfoWindow({
           content: infoContent
