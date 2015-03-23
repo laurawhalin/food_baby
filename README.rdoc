@@ -1,30 +1,26 @@
-== README
+https://food-baby.herokuapp.com/
 
-https://pure-fjord-3395.herokuapp.com/
+Food Baby is an app designed to quickly locate restaurants based on kid-friendliness.
+This 3-week project made use of incorporates Ruby on Rails, Facebook OAuth,
+and the Google Map JavaScript V3 and Factual.com APIs.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Food Baby was built using TDD to drive development and includes email notification
+for user registration, background workers for daily user reports, and was designed
+for mobile devices. Additional project specifications can be found at
+https://github.com/turingschool/lesson_plans/blob/master/ruby_03-professional_rails_applications/self_directed_project.markdown
 
-Things you may want to cover:
+To check out this project: git clone https://github.com/laurawhalin/food-baby.git
 
-* Ruby version
+Install any missing gems: "bundle"
 
-* System dependencies
+Make sure PostgreSQL is running on your local machine.
 
-* Configuration
+Initialize the database using the command "rake db:setup" to create and migrate the database.
 
-* Database creation
+Start your local server using: "unicorn" or "rails server"
 
-* Database initialization
+Go to 'localhost:"specified port"' to check out the site locally.
 
-* How to run the test suite
+Food Baby was built on Rails 4.2.0.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Run the test suite using: "rake test"
